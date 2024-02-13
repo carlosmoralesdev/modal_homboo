@@ -4,7 +4,7 @@ function changeHeight() {
     array = document.getElementsByClassName('modal-body')
     for (let index = 0; index < array.length; index++) {
         let elemento = array[index]
-        elemento.style.height = (valorHeight - 220) + "px"
+        elemento.style.height = (valorHeight - 180) + "px"
         //console.log(elemento)
     }
     /* elementos.forEach(elemento => {
