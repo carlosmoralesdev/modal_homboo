@@ -4,7 +4,7 @@ function changeHeight() {
     array = document.getElementsByClassName('modal-body')
     for (let index = 0; index < array.length; index++) {
         let elemento = array[index]
-        elemento.style.maxHeight = "calc(" + valorHeight + " - 180px) !important"
+        elemento.style.maxHeight = "calc(" + valorHeight + "px - 180px) !important"
     }
     /* elementos.forEach(elemento => {
         elemento.style.maxHeight = "calc(" + valorHeight + " - 180px) !important"
