@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/icons/favicon.ico">
+  <title>Homboo</title>
+  <!-- CSS Sheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/homboo.css">
+  <!-- <link rel="stylesheet" href="css/architecture.css"> -->
+  <link rel="stylesheet" href="css/circle.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/bootstrap-select.css">
+  <!-- JavaScript Sheets -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/homboo.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/architecture.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- MODAL NEW ARTICLES DETAIL -->
+  <div id="newArticlesDetail-n" class="modal modal-new-articles modal-scroll-out fade" role="dialog">
+    <div class="modal-close-fixed" style="right: 1vw;">
+      <div class="homboo-toggle homboo-toggle-static" data-dismiss="modal"
+        style="position: relative; padding-left: 0px;">
+        <div class="open">
+          <span style="background: black;"></span>
+          <span style="background: black;"></span>
+          <span style="background: black;"></span>
+          <span style="background: black;"></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="panel center">
+            <div class="panel-body" style="position:relative;padding:0px;padding-top: 0px;">
+              <div class="news_article" style="border-bottom:none;padding-top: 0px;">
+                <div class="news_article-details" style="padding-top: 0px; border-top:none;">
+                  <div style="text-align: left;">
+                    <img class="news_article-author-logo news_article-author-logo-invert"
+                      src="https://cloudfront.v2com-newswire.com/assets/public/v2com-newswire-9b8bc6975b608a119100398fb4f65c8e46fcedb36643f7a54124cb467ad377b5.png"
+                      alt="V2COMnewswire">
+                  </div>
+                  <div class="news_article-title" style="text-align: left;padding-bottom: 50px;">The Top 12 Design and
+                    Architecture Magazine</div>
+                  <div class="type"><span>Tue, September 9, 2020, 9:56 AM</span></div>
+                  <div style="padding-top: 10px; padding-bottom: 10px;display: flex; align-items: flex-end;">
+                    <img src="images/logo.svg" class="img-responsive" alt="Homboo" style="width: 150px;">
+                    <div style="font-weight: bold !important; font-size: 15px;">/ NEWS</div>
+                  </div>
+                  <div class="display-min-width marginTop10">
+                    <div class="min-width-600px">
+                      <div class="btn-homboo-between">
+                        <button class="btn btn-homboo-icon btn-homboo-services fontBold" data-toggle="modal"
+                          data-target="#likeProject">
+                          <i class="fa fa-thumbs-up btn-icon"></i>
+                          <div class="btn-text"><span class="likes">15000</span> Like</div>
+                          <i class="btn-icon"></i>
+                        </button>
+                        <button class="btn btn-homboo-icon btn-homboo-services fontBold dropdown-full-absolute-action">
+                          <i class="fa fa-share btn-icon"></i>
+                          <div class="btn-text">Share</div>
+                          <i class="btn-icon"></i>
+                        </button>
+                      </div>
+                      <div class="dropdown-full-absolute">
+                        <div class="dropdown-full" style="z-index:4">
+                          <div class="arrow-top-content arrow-top-content-for-two">
+                            <div class="arrow-top-border">
+                              <div class="arrow-top"></div>
+                            </div>
+                          </div>
+                          <div class="dropdown-content">
+                            <div class="dropdown-top fontBold">Share this desing!</div>
+                            <div class="dropdown-body">
+                              <div class="share-social">
+                                <a href="http://www.tumblr.com/share/link?url=http://www.your-domain.com/your-page.html"
+                                  class="share-social-child" target="_blank">
+                                  <div class="social-icon b-tumblr"><i class="fa fa-tumblr"></i></div>
+                                  <div class="social-title">Tumblr</div>
+                                </a>
+                                <a href="https://www.pinterest.com/pin/create/button/?url=[Link]&media=[Image]&description=[Description]"
+                                  class="share-social-child" target="_blank">
+                                  <div class="social-icon b-pinterest"><i class="fa fa-pinterest-p"></i></div>
+                                  <div class="social-title">Pinterest</div>
+                                </a>
+                                <a href="http://twitter.com/share?text=<TITLE>&url=<URL>" class="share-social-child"
+                                  target="_blank">
+                                  <div class="social-icon b-twitter"><i class="fa fa-twitter"></i></div>
+                                  <div class="social-title">Twitter</div>
+                                </a>
+                                <a href="https://www.facebook.com/sharer.php?u=[Link]" class="share-social-child"
+                                  target="_blank">
+                                  <div class="social-icon b-facebook"><i class="fa fa-facebook-f"></i></div>
+                                  <div class="social-title">Facebook</div>
+                                </a>
+                                <a class="share-social-child" data-toggle="modal" data-target="#shareProject">
+                                  <div class="social-icon b-mail"><i class="fa fa-envelope-o"></i></div>
+                                  <div class="social-title">Mail</div>
+                                </a>
+                                <a class="share-social-child copy_clipboard"
+                                  data-clipboard-text="http://homboo.com/project1" data-toggle="modal"
+                                  data-target="#copiedURL">
+                                  <div class="social-icon b-url"><i class="fa fa-link"></i></div>
+                                  <div class="social-title">URL</div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="display-rest"></div>
+                  </div>
+                </div>
+                <div class="news_article-text">
+                  <div>
+                    <img src="images/slide/portada.png" alt="" style="width: 100%;">
+                    <p>Footer Images Text Complementary</p>
+                  </div>
+                  <p class="line12-18">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ultrices elit. Duis
+                    sollicitudin nisl
+                    lectus, a porttitor magna dictum ac. Donec faucibus nibh mattis nisl placerat, eget ultricies enim
+                    egestas. Curabitur pretium quam in nisl pellentesque, eget egestas tellus ornare. Phasellus at
+                    commodo arcu, nec scelerisque lorem. Etiam pretium vel lectus et tincidunt. Etiam ornare rutrum
+                    lorem id ullamcorper. Nulla quis viverra arcu, ut imperdiet massa. Suspendisse feugiat massa mattis
+                    accumsan pellentesque. Maecenas eget mi a magna porttitor vehicula non id lectus. Donec ut posuere
+                    mauris, ac rhoncus erat. Aenean finibus ac ipsum ac feugiat. Vivamus sit amet tincidunt orci. Duis
+                    eget imperdiet nunc, vitae tincidunt nibh. Curabitur lacinia nisi id risus molestie rhoncus.
+                    <br>
+                    <br>
+                    Etiam eros tellus, semper quis odio quis, sollicitudin scelerisque lacus. Cras eget lorem id turpis
+                    volutpat pulvinar. Vestibulum odio tortor, porta nec mollis et, vestibulum vel metus. Nulla vitae
+                    turpis eget ipsum gravida posuere sit amet vitae lectus. Suspendisse nunc nibh, placerat at magna
+                    vitae, dapibus interdum sem. Donec vel nisi at libero interdum sollicitudin. Sed fermentum erat in
+                    massa laoreet, vel vehicula nibh fermentum. Praesent ultricies ligula in sapien faucibus molestie.
+                    Fusce interdum velit ac sem tempus egestas. Suspendisse potenti. Proin ullamcorper, dolor ornare
+                    interdum auctor, tortor purus laoreet tellus, eget tempor tellus nibh eget arcu. Maecenas tincidunt
+                    a erat non hendrerit. Phasellus libero nisl, mollis eu condimentum sed, ullamcorper nec tortor. Cras
+                    non justo fringilla ante iaculis congue.
+                    Aenean ullamcorper lobortis elit ac malesuada. Nullam id purus molestie, suscipit tellus ultrices,
+                    porttitor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ultrices elit. Duis
+                    sollicitudin nisl
+                    lectus, a porttitor magna dictum ac. Donec faucibus nibh mattis nisl placerat, eget ultricies enim
+                    egestas. Curabitur pretium quam in nisl pellentesque, eget egestas tellus ornare. Phasellus at
+                    commodo arcu, nec scelerisque lorem. Etiam pretium vel lectus et tincidunt. Etiam ornare rutrum
+                    lorem id ullamcorper. Nulla quis viverra arcu, ut imperdiet massa. Suspendisse feugiat massa mattis
+                    accumsan pellentesque. Maecenas eget mi a magna porttitor vehicula non id lectus. Donec ut posuere
+                    mauris, ac rhoncus erat. Aenean finibus ac ipsum ac feugiat. Vivamus sit amet tincidunt orci. Duis
+                    eget imperdiet nunc, vitae tincidunt nibh. Curabitur lacinia nisi id risus molestie rhoncus.
+                    <br>
+                    <br>
+                    Etiam eros tellus, semper quis odio quis, sollicitudin scelerisque lacus. Cras eget lorem id turpis
+                    volutpat pulvinar. Vestibulum odio tortor, porta nec mollis et, vestibulum vel metus. Nulla vitae
+                    turpis eget ipsum gravida posuere sit amet vitae lectus. Suspendisse nunc nibh, placerat at magna
+                    vitae, dapibus interdum sem. Donec vel nisi at libero interdum sollicitudin. Sed fermentum erat in
+                    massa laoreet, vel vehicula nibh fermentum. Praesent ultricies ligula in sapien faucibus molestie.
+                    Fusce interdum velit ac sem tempus egestas. Suspendisse potenti. Proin ullamcorper, dolor ornare
+                    interdum auctor, tortor purus laoreet tellus, eget tempor tellus nibh eget arcu. Maecenas tincidunt
+                    a erat non hendrerit. Phasellus libero nisl, mollis eu condimentum sed, ullamcorper nec tortor. Cras
+                    non justo fringilla ante iaculis congue.
+                    <br>
+                    <br>
+                    Aenean ullamcorper lobortis elit ac malesuada. Nullam id purus molestie, suscipit tellus ultrices,
+                    porttitor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ultrices elit. Duis
+                    sollicitudin nisl
+                    lectus, a porttitor magna dictum ac. Donec faucibus nibh mattis nisl placerat, eget ultricies enim
+                    egestas. Curabitur pretium quam in nisl pellentesque, eget egestas tellus ornare. Phasellus at
+                    commodo arcu, nec scelerisque lorem. Etiam pretium vel lectus et tincidunt. Etiam ornare rutrum
+                    lorem id ullamcorper. Nulla quis viverra arcu, ut imperdiet massa. Suspendisse feugiat massa mattis
+                    accumsan pellentesque. Maecenas eget mi a magna porttitor vehicula non id lectus. Donec ut posuere
+                    mauris, ac rhoncus erat. Aenean finibus ac ipsum ac feugiat. Vivamus sit amet tincidunt orci. Duis
+                    eget imperdiet nunc, vitae tincidunt nibh. Curabitur lacinia nisi id risus molestie rhoncus.
+                    Etiam eros tellus, semper quis odio quis, sollicitudin scelerisque lacus. Cras eget lorem id turpis
+                    volutpat pulvinar. Vestibulum odio tortor, porta nec mollis et, vestibulum vel metus. Nulla vitae
+                    turpis eget ipsum gravida posuere sit amet vitae lectus. Suspendisse nunc nibh, placerat at magna
+                    vitae, dapibus interdum sem. Donec vel nisi at libero interdum sollicitudin. Sed fermentum erat in
+                    massa laoreet, vel vehicula nibh fermentum. Praesent ultricies ligula in sapien faucibus molestie.
+                    Fusce interdum velit ac sem tempus egestas. Suspendisse potenti. Proin ullamcorper, dolor ornare
+                    interdum auctor, tortor purus laoreet tellus, eget tempor tellus nibh eget arcu. Maecenas tincidunt
+                    a erat non hendrerit. Phasellus libero nisl, mollis eu condimentum sed, ullamcorper nec tortor. Cras
+                    non justo fringilla ante iaculis congue.
+                    Aenean ullamcorper lobortis elit ac malesuada. Nullam id purus molestie, suscipit tellus ultrices,
+                    porttitor.
+                  </p>
+                  <div class="caas-readmore-collapse">
+                    <a href="#!" class="btn btn-homboo-secondary" target="_blank" style="max-width: 300px;">Continue
+                      Reading</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMIENZA HEADER -->
+  <header>
+    <div class="header-homboo wrapper">
+      <div class="logo">
+        <div class="img-logo"><img src="images/logo.svg" class="img-responsive" alt="Homboo"></div>
+        <div class="text barra">|</div>
+        <div class="text text-for-logo">Boosting the next generation of home designs</div>
+      </div>
+
+      <div class="homboo-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="user user-responsive">
+        <div class="user-option">
+          <div class="dropdown dropdown-sigin">
+            <a href="#" class="link-homboo-header dropdown-toggle link-multi" data-toggle="dropdown">
+              <div>My Homboo <span class="caret"></span></div>
+              <div class="user-avatar"><span class="fa fa-user"></span></div>
+            </a>
+            <ul class="dropdown-menu">
+              <div class="arrow-top-content">
+                <div class="arrow-top-border arrow-left">
+                  <div class="arrow-top"></div>
+                </div>
+              </div>
+              <button class="btn btn-homboo">Sign in</button>
+              <div class="message-sign">New at homboo? Register now!</div>
+              <button class="btn btn-homboo-secondary">Register</button>
+            </ul>
+            <ul class="dropdown-menu" style="display:none">
+              <div class="arrow-top-content">
+                <div class="arrow-top-border arrow-left">
+                  <div class="arrow-top"></div>
+                </div>
+              </div>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Saved Home Designs</a></li>
+              <li><a href="#">My orders</a></li>
+              <li class="divider"></li>
+              <button class="btn btn-homboo-secondary">Sign out</button>
+            </ul>
+          </div>
+        </div>
+        <div class="user-option">
+          <a href="#" class="link-homboo-header link-multi">
+            <div>Cart<span class="cart-cant">1</span></div>
+            <div class="user-avatar"><span class="fa fa-shopping-cart"></span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu wrapper">
+      <div class="header-menu-options">
+        <div class="option-header-left">
+          <div class="option-header">
+            <div class="dropdown dropdown-homboo dropdown-homboo-selected dropdown-homboo-header">
+              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home Designs</a>
+              <ul class="dropdown-menu">
+                <div class="arrow-top-content">
+                  <div class="arrow-top-border arrow-left">
+                    <div class="arrow-top"></div>
+                  </div>
+                </div>
+                <div class="dropdown-menu-multi">
+                  <div class="dropdown-menu-unique menu">
+                    <li class="styles"><a href="#" class="option">Styles</a></li>
+                    <li class="best-sellers"><a href="#" class="option">Best Selling Home Designs</a></li>
+                    <li class="project-of-the-month"><a href="#" class="option">Project of the month</a></li>
+                    <li class="latest"><a href="#" class="option">Latest Home Designs</a></li>
+                    <li class="allhomedesign"><a href="#" class="option">All Home Designs</a></li>
+                  </div>
+                  <div class="dropdown-menu-unique styles">
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Industrial</a></li>
+                    <li><a href="#">Minimalist</a></li>
+                    <li><a href="#">Modern</a></li>
+                    <li><a href="#">Modern House Glass</a></li>
+                    <li><a href="#">Modern Farm House</a></li>
+                    <li><a href="#">Modern Ranch</a></li>
+                    <li><a href="#">Modern Traditional</a></li>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="option-header">
+            <a href="#" class="active">Tips & Articles</a>
+          </div>
+        </div>
+        <div class="option-header-right">
+          <div class="option-header">
+            <a href="11_PrivacyPolicy.html" class="link-homboo-btn display-responsive not-option-header"
+              style="display:none">Are you an architect?</a>
+            <div class="dropdown dropdown-homboo-content">
+              <a class="link-homboo-btn not-option-header display-none-responsive dropdown-toggle"
+                data-toggle="dropdown">Are you an architect?</a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <div class="arrow-top-content">
+                  <div class="arrow-top-border">
+                    <div class="arrow-top"></div>
+                  </div>
+                </div>
+                <div class="homboo-content">Welcome to Homboo! The ultimate platform where you can publish and sell your
+                  home designs to professional and non-professional homebuilders</div>
+                <div class="text-center marginTop10"><a href="#" class="link-homboo not-option-header">Learn more!</a>
+                </div>
+                <li class="divider"></li>
+                <button class="btn btn-homboo">Register</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- TERMINA HEADER -->
+
+  <!-- MODAL LIKES -->
+  <div id="likeProject" class="modal messageBigModal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Sign in</div>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Sign in to your Homboo account to give like this article. If you do not have a homboo account click on the
+            "Register" botton and create one.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-homboo-secondary">Register</button>
+          <button class="btn btn-homboo">Sign in</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section align="center" class="container-fluid wrapper">
+
+    <div class="col-md-12" style="margin-bottom:30px;padding:0px;">
+
+      <div class="panel panel-information center panel-img-container-about"
+        style="display: flex; justify-content: center;">
+        <img class="img-container" src="./images/about/Img-One.webp" />
+        <div style="position: absolute; color: white;">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-12" style="margin-bottom:30px;padding:0px;">
+      <div class="encabezado-section info-customers">
+        <h1>About Homboo</h1>
+        <p class="text-align-justify">
+
+          Every homeowner deserves to realize their dream home with unparalleled architecture, shaped by their visions
+          and needs in a dynamic world of constant social, technological, and environmental change. Thus, we created a
+          portal that promotes and sells online architects' original house designs to all future homeowners, and we
+          called it Homboo (home + Booster).
+
+        </p>
+        <p class="text-align-justify">
+          At Homboo, we sell online house designs/floor plans that blend the best architecture with the latest
+          innovations, ensuring each home stands as a testament to individual aspirations.
+        </p>
+        <p class="text-align-justify fontBold subtitle">
+          Our Drive
+        </p>
+        <p class="text-align-justify after-subtitle">
+          Offer the highest possible house design quality standards to all prospective homeowners.
+        </p>
+        <p class="text-align-justify fontBold subtitle">
+          Our Mission
+        </p>
+        <p class="text-align-justify after-subtitle">
+          Promote and sell architects' next generation of cutting-edge house designs at a price for all.
+        </p>
+        <p class="text-align-justify fontBold subtitle">
+          Our Goals
+        </p>
+        <ul class="after-subtitle">
+          <li class="text-align-justify">
+            Elevate living experiences.
+          </li>
+          <li class="text-align-justify">
+            Enhance better real estate investments.
+          </li>
+          <li class="text-align-justify">
+            Enhance better real estate investments.
+          </li>
+        </ul>
+        <p class="fontBold final-slogan">
+          ... Boosting the next generation of home designs!
+        </p>
+      </div>
+
+      <div class="btn-separation-sections">
+        <button class="btn btn-homboo">Become a Homboo Architect</button>
+      </div>
+    </div>
+
+    <div class="col-md-12" style="margin-bottom:30px;padding:0px;">
+
+      <div class="panel panel-information center panel-img-container-about"
+        style="display: flex; justify-content: center;">
+        <img class="img-container" src="./images/about/Img-Two.webp" />
+        <div style="position: absolute; color: white;">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-12" style="margin-bottom:30px;padding:0px;">
+      <div class="encabezado-section" style="margin-top: 35px;">
+        <p class="fontBold final-slogan-two">Connecting architects' knowledge, relevance and
+        </p>
+        <p class="fontBold final-slogan-two">
+          creativity to all homeowners 
+        </p>
+      </div>
+
+      <div class="btn-separation-sections">
+        <button class="btn btn-homboo">Sign Up</button>
+      </div>
+    </div>
+
+    <div id="faqs" class="col-md-12 panel-fullwidth-background-gray">
+      <div class="encabezado-section faq-div">
+        <h1>
+          FAQ
+        </h1>
+      </div>
+      <div class="faq-section">
+
+        <div class="faq-option" id="internAccordionOne" style="margin-left: 10px;">
+          <!-- PRIMER ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionOne" href="#internCollapseOne">
+                <a class="accordion-toggle-close">Ownership of Home Designs</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+
+                <a class="accordion-toggle-open">Ownership of Home Designs</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseOne" class="panel-collapse collapse">
+            <p>Homboo hosts the next generation of home architecture projects from global designers, but it doesn't own or create these designs.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionTwo" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseTwo">
+                <a class="accordion-toggle-close">House Design Project Quality Assurance</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">House Design Project Quality Assurance</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseTwo" class="panel-collapse collapse">
+            <p>House design projects are uploaded by the architects themselves. Our team reviews each project to ensure it meets Homboo's quality and completeness standards.</p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionThree" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseThree">
+                <a class="accordion-toggle-close">Content of Purchased Projects</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Content of Purchased Projects</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseThree" class="panel-collapse collapse">
+            <p>
+              Projects include a complete architectural drawing set with essential and general construction drawings details. Additional documentation may vary.  
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionFour" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseFour">
+                <a class="accordion-toggle-close">Measurement Systems</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Measurement Systems</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseFour" class="panel-collapse collapse">
+            <p>
+              Architects will provide house design projects in Imperial systems, but they may also include projects in the metric system.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionFive" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseFive">
+                <a class="accordion-toggle-close">Additional Documentation</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Additional Documentation</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseFive" class="panel-collapse collapse">
+            <p>
+              Beyond the delivered Architectural construction plan set, projects will generally require separate sets for structural, electrical, mechanical, and plumbing details.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionSix" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseSix">
+                <a class="accordion-toggle-close">Benefits of Unique Designs</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Benefits of Unique Designs</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseSix" class="panel-collapse collapse">
+            <p>
+              Investing in original, contemporary designs from Homboo ensures a rewarding and efficient home-building experience.</p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-12" style="text-align: center;margin-top: 60px; font-size: 24px; color: #666666; margin-bottom: 15px;">
+      <div style="text-align: center;">
+        <button class="btn btn-homboo" onclick="">Get Started</button>
+      </div>
+    </div>
+
+    <!-- </div> -->
+
+  </section>
+
+  <!-- COMIENZA FOOTER -->
+  <footer class="site-footer">
+    <div class="wrapper footer-menu">
+      <div class="option-left">
+        <div class="subscribe">
+          <div class="title">Subscribe</div>
+          <div class="description">Join our newsletter to Get Inspired!</div>
+          <div class="input" style="padding: 0px">
+            <input type="email" class="form-control" placeholder="Your E-mail">
+          </div>
+          <div><button class="btn btn-homboo-secondary">Sign Up</button></div>
+        </div>
+      </div>
+      <div class="option-right">
+        <div class="option">
+          <label>Corporate</label>
+          <ul class="footer-submenu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Term & Conditions</a></li>
+            <li><a href="#">Privacy Policies</a></li>
+            <li><a href="12_TermConditions.html#returnPolicies">Return Policies</a></li>
+          </ul>
+        </div>
+        <div class="option">
+          <label>Customer Service</label>
+          <ul class="footer-submenu">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">F.A.Q.s</a></li>
+          </ul>
+        </div>
+        <div class="option">
+          <label>My Homboo</label>
+          <ul class="footer-submenu">
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+        <div class="option">
+          <label>Are you an architect?</label>
+          <ul class="footer-submenu">
+            <li><a href="#">Register and publish your designs!</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper legacy">
+      <div class="legacy-social">
+        <div>
+          <img src="images/logo-blanco-blanco.png" alt="" height="20px">
+        </div>
+        <div>
+          <a href="https://www.youtube.com/channel/UC0hbQMi4mOE0i4QQ0hqkMwg" target="_blank">
+            <i class="fa fa-youtube-play"></i>
+          </a>
+          <a href="https://www.facebook.com/hombooweb" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="http://pinterest.com/hombooweb/" target="_blank">
+            <i class="fa fa-pinterest-p"></i>
+          </a>
+          <a href="https://twitter.com/hombooweb" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://www.flickr.com/photos/hombooweb/" target="_blank">
+            <i class="fa fa-flickr"></i>
+          </a>
+          <a href="http://www.instagram.com/hombooweb" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="legacy-right">
+        <span class="right">Homboo Digital Inc | C.I.F. B88051883 2018 - All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+  <!-- TERMINA FOOTER -->
+
+  <script>
+    window.onload = function () {
+
+      let hash = window.location.hash;
+      if (!hash) return
+      if (hash === "") return
+      let target = document.querySelector(hash);
+      let salto = 0;
+
+      if(document.documentElement.offsetWidth >= 0) salto = 1580;
+      if(document.documentElement.offsetWidth >= 360) salto = 1500;
+      if(document.documentElement.offsetWidth >= 410) salto = 1480;
+      if(document.documentElement.offsetWidth >= 475) salto = 1440;
+      if(document.documentElement.offsetWidth >= 530) salto = 1380;
+      if(document.documentElement.offsetWidth >= 550) salto = 1580;
+      if(document.documentElement.offsetWidth >= 600) salto = 1520;
+      if(document.documentElement.offsetWidth >= 785) salto = 1500;
+      if(document.documentElement.offsetWidth > 850) salto = 2160;
+      if(document.documentElement.offsetWidth >= 990) salto = 1280;
+
+      console.log(document.documentElement.offsetWidth, salto, target.offsetTop, Math.abs(target.offsetTop - salto))
+
+      if(Math.abs(target.offsetTop - salto) > 200) salto = target.offsetTop*0.92
+
+      window.scrollTo(0, salto);
+
+    }
+  </script>
+
+</body>
+
+</html>
