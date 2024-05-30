@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/icons/favicon.ico">
+  <title>Homboo</title>
+  <!-- CSS Sheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/homboo.css">
+  <!-- <link rel="stylesheet" href="css/architecture.css"> -->
+  <link rel="stylesheet" href="css/circle.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/bootstrap-select.css">
+  <!-- JavaScript Sheets -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/homboo.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/architecture.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+
+</head>
+
+<body>
+
+  <!-- MODAL NEW ARTICLES DETAIL -->
+  <div id="newArticlesDetail-n" class="modal modal-new-articles modal-scroll-out fade" role="dialog">
+    <div class="modal-close-fixed" style="right: 1vw;">
+      <div class="homboo-toggle homboo-toggle-static" data-dismiss="modal"
+        style="position: relative; padding-left: 0px;">
+        <div class="open">
+          <span style="background: black;"></span>
+          <span style="background: black;"></span>
+          <span style="background: black;"></span>
+          <span style="background: black;"></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="panel center">
+            <div class="panel-body" style="position:relative;padding:0px;padding-top: 0px;">
+              <div class="news_article" style="border-bottom:none;padding-top: 0px;">
+                <div class="news_article-details" style="padding-top: 0px; border-top:none;">
+                  <div style="text-align: left;">
+                    <img class="news_article-author-logo news_article-author-logo-invert"
+                      src="https://cloudfront.v2com-newswire.com/assets/public/v2com-newswire-9b8bc6975b608a119100398fb4f65c8e46fcedb36643f7a54124cb467ad377b5.png"
+                      alt="V2COMnewswire">
+                  </div>
+                  <div class="news_article-title" style="text-align: left;padding-bottom: 50px;">The Top 12 Design and
+                    Architecture Magazine</div>
+                  <div class="type"><span>Tue, September 9, 2020, 9:56 AM</span></div>
+                  <div style="padding-top: 10px; padding-bottom: 10px;display: flex; align-items: flex-end;">
+                    <img src="images/logo.svg" class="img-responsive" alt="Homboo" style="width: 150px;">
+                    <div style="font-weight: bold !important; font-size: 15px;">/ NEWS</div>
+                  </div>
+                  <div class="display-min-width marginTop10">
+                    <div class="min-width-600px">
+                      <div class="btn-homboo-between">
+                        <button class="btn btn-homboo-icon btn-homboo-services fontBold" data-toggle="modal"
+                          data-target="#likeProject">
+                          <i class="fa fa-thumbs-up btn-icon"></i>
+                          <div class="btn-text"><span class="likes">15000</span> Like</div>
+                          <i class="btn-icon"></i>
+                        </button>
+                        <button class="btn btn-homboo-icon btn-homboo-services fontBold dropdown-full-absolute-action">
+                          <i class="fa fa-share btn-icon"></i>
+                          <div class="btn-text">Share</div>
+                          <i class="btn-icon"></i>
+                        </button>
+                      </div>
+                      <div class="dropdown-full-absolute">
+                        <div class="dropdown-full" style="z-index:4">
+                          <div class="arrow-top-content arrow-top-content-for-two">
+                            <div class="arrow-top-border">
+                              <div class="arrow-top"></div>
+                            </div>
+                          </div>
+                          <div class="dropdown-content">
+                            <div class="dropdown-top fontBold">Share this desing!</div>
+                            <div class="dropdown-body">
+                              <div class="share-social">
+                                <a href="http://www.tumblr.com/share/link?url=http://www.your-domain.com/your-page.html"
+                                  class="share-social-child" target="_blank">
+                                  <div class="social-icon b-tumblr"><i class="fa fa-tumblr"></i></div>
+                                  <div class="social-title">Tumblr</div>
+                                </a>
+                                <a href="https://www.pinterest.com/pin/create/button/?url=[Link]&media=[Image]&description=[Description]"
+                                  class="share-social-child" target="_blank">
+                                  <div class="social-icon b-pinterest"><i class="fa fa-pinterest-p"></i></div>
+                                  <div class="social-title">Pinterest</div>
+                                </a>
+                                <a href="http://twitter.com/share?text=<TITLE>&url=<URL>" class="share-social-child"
+                                  target="_blank">
+                                  <div class="social-icon b-twitter"><i class="fa fa-twitter"></i></div>
+                                  <div class="social-title">Twitter</div>
+                                </a>
+                                <a href="https://www.facebook.com/sharer.php?u=[Link]" class="share-social-child"
+                                  target="_blank">
+                                  <div class="social-icon b-facebook"><i class="fa fa-facebook-f"></i></div>
+                                  <div class="social-title">Facebook</div>
+                                </a>
+                                <a class="share-social-child" data-toggle="modal" data-target="#shareProject">
+                                  <div class="social-icon b-mail"><i class="fa fa-envelope-o"></i></div>
+                                  <div class="social-title">Mail</div>
+                                </a>
+                                <a class="share-social-child copy_clipboard"
+                                  data-clipboard-text="http://homboo.com/project1" data-toggle="modal"
+                                  data-target="#copiedURL">
+                                  <div class="social-icon b-url"><i class="fa fa-link"></i></div>
+                                  <div class="social-title">URL</div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="display-rest"></div>
+                  </div>
+                </div>
+                <div class="news_article-text">
+                  <div>
+                    <img src="images/slide/portada.png" alt="" style="width: 100%;">
+                    <p>Footer Images Text Complementary</p>
+                  </div>
+                  <p class="line12-18">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ultrices elit. Duis
+                    sollicitudin nisl
+                    lectus, a porttitor magna dictum ac. Donec faucibus nibh mattis nisl placerat, eget ultricies enim
+                    egestas. Curabitur pretium quam in nisl pellentesque, eget egestas tellus ornare. Phasellus at
+                    commodo arcu, nec scelerisque lorem. Etiam pretium vel lectus et tincidunt. Etiam ornare rutrum
+                    lorem id ullamcorper. Nulla quis viverra arcu, ut imperdiet massa. Suspendisse feugiat massa mattis
+                    accumsan pellentesque. Maecenas eget mi a magna porttitor vehicula non id lectus. Donec ut posuere
+                    mauris, ac rhoncus erat. Aenean finibus ac ipsum ac feugiat. Vivamus sit amet tincidunt orci. Duis
+                    eget imperdiet nunc, vitae tincidunt nibh. Curabitur lacinia nisi id risus molestie rhoncus.
+                    <br>
+                    <br>
+                    Etiam eros tellus, semper quis odio quis, sollicitudin scelerisque lacus. Cras eget lorem id turpis
+                    volutpat pulvinar. Vestibulum odio tortor, porta nec mollis et, vestibulum vel metus. Nulla vitae
+                    turpis eget ipsum gravida posuere sit amet vitae lectus. Suspendisse nunc nibh, placerat at magna
+                    vitae, dapibus interdum sem. Donec vel nisi at libero interdum sollicitudin. Sed fermentum erat in
+                    massa laoreet, vel vehicula nibh fermentum. Praesent ultricies ligula in sapien faucibus molestie.
+                    Fusce interdum velit ac sem tempus egestas. Suspendisse potenti. Proin ullamcorper, dolor ornare
+                    interdum auctor, tortor purus laoreet tellus, eget tempor tellus nibh eget arcu. Maecenas tincidunt
+                    a erat non hendrerit. Phasellus libero nisl, mollis eu condimentum sed, ullamcorper nec tortor. Cras
+                    non justo fringilla ante iaculis congue.
+                    Aenean ullamcorper lobortis elit ac malesuada. Nullam id purus molestie, suscipit tellus ultrices,
+                    porttitor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ultrices elit. Duis
+                    sollicitudin nisl
+                    lectus, a porttitor magna dictum ac. Donec faucibus nibh mattis nisl placerat, eget ultricies enim
+                    egestas. Curabitur pretium quam in nisl pellentesque, eget egestas tellus ornare. Phasellus at
+                    commodo arcu, nec scelerisque lorem. Etiam pretium vel lectus et tincidunt. Etiam ornare rutrum
+                    lorem id ullamcorper. Nulla quis viverra arcu, ut imperdiet massa. Suspendisse feugiat massa mattis
+                    accumsan pellentesque. Maecenas eget mi a magna porttitor vehicula non id lectus. Donec ut posuere
+                    mauris, ac rhoncus erat. Aenean finibus ac ipsum ac feugiat. Vivamus sit amet tincidunt orci. Duis
+                    eget imperdiet nunc, vitae tincidunt nibh. Curabitur lacinia nisi id risus molestie rhoncus.
+                    <br>
+                    <br>
+                    Etiam eros tellus, semper quis odio quis, sollicitudin scelerisque lacus. Cras eget lorem id turpis
+                    volutpat pulvinar. Vestibulum odio tortor, porta nec mollis et, vestibulum vel metus. Nulla vitae
+                    turpis eget ipsum gravida posuere sit amet vitae lectus. Suspendisse nunc nibh, placerat at magna
+                    vitae, dapibus interdum sem. Donec vel nisi at libero interdum sollicitudin. Sed fermentum erat in
+                    massa laoreet, vel vehicula nibh fermentum. Praesent ultricies ligula in sapien faucibus molestie.
+                    Fusce interdum velit ac sem tempus egestas. Suspendisse potenti. Proin ullamcorper, dolor ornare
+                    interdum auctor, tortor purus laoreet tellus, eget tempor tellus nibh eget arcu. Maecenas tincidunt
+                    a erat non hendrerit. Phasellus libero nisl, mollis eu condimentum sed, ullamcorper nec tortor. Cras
+                    non justo fringilla ante iaculis congue.
+                    <br>
+                    <br>
+                    Aenean ullamcorper lobortis elit ac malesuada. Nullam id purus molestie, suscipit tellus ultrices,
+                    porttitor.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ultrices elit. Duis
+                    sollicitudin nisl
+                    lectus, a porttitor magna dictum ac. Donec faucibus nibh mattis nisl placerat, eget ultricies enim
+                    egestas. Curabitur pretium quam in nisl pellentesque, eget egestas tellus ornare. Phasellus at
+                    commodo arcu, nec scelerisque lorem. Etiam pretium vel lectus et tincidunt. Etiam ornare rutrum
+                    lorem id ullamcorper. Nulla quis viverra arcu, ut imperdiet massa. Suspendisse feugiat massa mattis
+                    accumsan pellentesque. Maecenas eget mi a magna porttitor vehicula non id lectus. Donec ut posuere
+                    mauris, ac rhoncus erat. Aenean finibus ac ipsum ac feugiat. Vivamus sit amet tincidunt orci. Duis
+                    eget imperdiet nunc, vitae tincidunt nibh. Curabitur lacinia nisi id risus molestie rhoncus.
+                    Etiam eros tellus, semper quis odio quis, sollicitudin scelerisque lacus. Cras eget lorem id turpis
+                    volutpat pulvinar. Vestibulum odio tortor, porta nec mollis et, vestibulum vel metus. Nulla vitae
+                    turpis eget ipsum gravida posuere sit amet vitae lectus. Suspendisse nunc nibh, placerat at magna
+                    vitae, dapibus interdum sem. Donec vel nisi at libero interdum sollicitudin. Sed fermentum erat in
+                    massa laoreet, vel vehicula nibh fermentum. Praesent ultricies ligula in sapien faucibus molestie.
+                    Fusce interdum velit ac sem tempus egestas. Suspendisse potenti. Proin ullamcorper, dolor ornare
+                    interdum auctor, tortor purus laoreet tellus, eget tempor tellus nibh eget arcu. Maecenas tincidunt
+                    a erat non hendrerit. Phasellus libero nisl, mollis eu condimentum sed, ullamcorper nec tortor. Cras
+                    non justo fringilla ante iaculis congue.
+                    Aenean ullamcorper lobortis elit ac malesuada. Nullam id purus molestie, suscipit tellus ultrices,
+                    porttitor.
+                  </p>
+                  <div class="caas-readmore-collapse">
+                    <a href="#!" class="btn btn-homboo-secondary" target="_blank" style="max-width: 300px;">Continue
+                      Reading</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMIENZA HEADER -->
+  <header>
+    <div class="header-homboo wrapper">
+      <div class="logo">
+        <div class="img-logo"><img src="images/logo.svg" class="img-responsive" alt="Homboo"></div>
+        <div class="text barra">|</div>
+        <div class="text text-for-logo">Boosting the next generation of home designs</div>
+      </div>
+
+      <div class="homboo-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="user user-responsive">
+        <div class="user-option">
+          <div class="dropdown dropdown-sigin">
+            <a href="#" class="link-homboo-header dropdown-toggle link-multi" data-toggle="dropdown">
+              <div>My Homboo <span class="caret"></span></div>
+              <div class="user-avatar"><span class="fa fa-user"></span></div>
+            </a>
+            <ul class="dropdown-menu">
+              <div class="arrow-top-content">
+                <div class="arrow-top-border arrow-left">
+                  <div class="arrow-top"></div>
+                </div>
+              </div>
+              <button class="btn btn-homboo">Sign in</button>
+              <div class="message-sign">New at homboo? Register now!</div>
+              <button class="btn btn-homboo-secondary">Register</button>
+            </ul>
+            <ul class="dropdown-menu" style="display:none">
+              <div class="arrow-top-content">
+                <div class="arrow-top-border arrow-left">
+                  <div class="arrow-top"></div>
+                </div>
+              </div>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Saved Home Designs</a></li>
+              <li><a href="#">My orders</a></li>
+              <li class="divider"></li>
+              <button class="btn btn-homboo-secondary">Sign out</button>
+            </ul>
+          </div>
+        </div>
+        <div class="user-option">
+          <a href="#" class="link-homboo-header link-multi">
+            <div>Cart<span class="cart-cant">1</span></div>
+            <div class="user-avatar"><span class="fa fa-shopping-cart"></span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu wrapper">
+      <div class="header-menu-options">
+        <div class="option-header-left">
+          <div class="option-header">
+            <div class="dropdown dropdown-homboo dropdown-homboo-selected dropdown-homboo-header">
+              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home Designs</a>
+              <ul class="dropdown-menu">
+                <div class="arrow-top-content">
+                  <div class="arrow-top-border arrow-left">
+                    <div class="arrow-top"></div>
+                  </div>
+                </div>
+                <div class="dropdown-menu-multi">
+                  <div class="dropdown-menu-unique menu">
+                    <li class="styles"><a href="#" class="option">Styles</a></li>
+                    <li class="best-sellers"><a href="#" class="option">Best Selling Home Designs</a></li>
+                    <li class="project-of-the-month"><a href="#" class="option">Project of the month</a></li>
+                    <li class="latest"><a href="#" class="option">Latest Home Designs</a></li>
+                    <li class="allhomedesign"><a href="#" class="option">All Home Designs</a></li>
+                  </div>
+                  <div class="dropdown-menu-unique styles">
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Industrial</a></li>
+                    <li><a href="#">Minimalist</a></li>
+                    <li><a href="#">Modern</a></li>
+                    <li><a href="#">Modern House Glass</a></li>
+                    <li><a href="#">Modern Farm House</a></li>
+                    <li><a href="#">Modern Ranch</a></li>
+                    <li><a href="#">Modern Traditional</a></li>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="option-header">
+            <a href="#" class="active">Tips & Articles</a>
+          </div>
+        </div>
+        <div class="option-header-right">
+          <div class="option-header">
+            <a href="11_PrivacyPolicy.html" class="link-homboo-btn display-responsive not-option-header"
+              style="display:none">Are you an architect?</a>
+            <div class="dropdown dropdown-homboo-content">
+              <a class="link-homboo-btn not-option-header display-none-responsive dropdown-toggle"
+                data-toggle="dropdown">Are you an architect?</a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <div class="arrow-top-content">
+                  <div class="arrow-top-border">
+                    <div class="arrow-top"></div>
+                  </div>
+                </div>
+                <div class="homboo-content">Welcome to Homboo! The ultimate platform where you can publish and sell your
+                  home designs to professional and non-professional homebuilders</div>
+                <div class="text-center marginTop10"><a href="#" class="link-homboo not-option-header">Learn more!</a>
+                </div>
+                <li class="divider"></li>
+                <button class="btn btn-homboo">Register</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- TERMINA HEADER -->
+
+  <!-- MODAL LIKES -->
+  <div id="likeProject" class="modal messageBigModal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Sign in</div>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Sign in to your Homboo account to give like this article. If you do not have a homboo account click on the
+            "Register" botton and create one.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-homboo-secondary">Register</button>
+          <button class="btn btn-homboo">Sign in</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section align="center" class="container-fluid wrapper">
+
+    <div class="col-md-12" style="margin-bottom:30px;padding:0px;">
+
+      <div class="panel panel-information center panel-img-container"
+        style="display: flex; align-items: center; justify-content: center;">
+        <img class="img-container" src="./images/Are-You-Architect/sectioneone-plus.webp" />
+        <div style="position: absolute; color: white;">
+          <h1 class="panel-title title-principal">Sell your home designs online</h1>
+          <p class="panel-body subtitle-principal">
+            Design, Sell, Change Lives
+          </p>
+          <br />
+          <button class="btn btn-homboo" onclick="">Become a seller</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-12" style="margin-bottom:30px;padding:0px;">
+      <div class="encabezado-section">
+        <h1>HOW IT WORKS</h1>
+        <p class="margin-phone-b-0">Join Homboo and connect with thousands of future homeowners seeking for the perfect
+          house plan.</p>
+      </div>
+      <div class="icon-text-section">
+        <div class="icon-text-box">
+          <!-- <svg fill="#000000" height="80px" width="80px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.001 512.001" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M506.54,44.038L382.625,0.463c-1.753-0.617-3.666-0.617-5.421,0L256,43.085L134.794,0.463
+                    c-1.753-0.617-3.666-0.617-5.421,0L5.459,44.038C2.189,45.187,0,48.278,0,51.745V503.83c0,2.65,1.285,5.135,3.448,6.667
+                    c2.164,1.532,4.934,1.919,7.433,1.04l121.205-42.621l121.206,42.621c1.754,0.617,3.666,0.617,5.421,0l121.203-42.621
+                    l121.206,42.621c0.882,0.31,1.797,0.463,2.709,0.463c1.67,0,3.325-0.512,4.724-1.503c2.162-1.532,3.448-4.018,3.448-6.667V51.745
+                    C512,48.278,509.811,45.187,506.54,44.038z M123.915,77.456c0,0.011,0,149.772,0,149.772l-53.093,18.671
+                    c-3.271,1.15-5.46,4.24-5.46,7.707v51.744c0,4.512,3.658,8.17,8.17,8.17s8.17-3.658,8.17-8.17v-45.956l42.213-14.844v140.633
+                    l-42.213,14.844v-40.209c0-4.512-3.658-8.17-8.17-8.17s-8.17,3.658-8.17,8.17v51.744c0,2.65,1.285,5.135,3.448,6.667
+                    c2.163,1.532,4.934,1.918,7.433,1.04l47.673-16.763v51.964L16.34,492.297V57.533l107.574-37.828V77.456z M247.83,492.296
+                    l-107.574-37.828v-51.964l107.574,37.828V492.296z M247.83,265.055l-45.617-16.041v-44.758c0-4.512-3.658-8.17-8.17-8.17
+                    c-4.512,0-8.17,3.658-8.17,8.17v50.545c0,3.467,2.188,6.558,5.46,7.707l56.498,19.867v140.633l-107.574-37.828V88.989
+                    l45.617,16.041v44.759c0,4.512,3.658,8.17,8.17,8.17c4.512,0,8.17-3.658,8.17-8.17v-39.013l45.617,16.041V265.055z
+                    M247.83,109.496L140.255,71.668V19.705L247.83,57.533V109.496z M388.085,88.989l42.213,14.845v138.239l-42.213-14.845V88.989z
+                    M264.17,57.533l107.574-37.828v51.964L264.17,109.496V57.533z M264.17,126.817l45.617-16.041v39.012
+                    c0,4.512,3.658,8.17,8.17,8.17s8.17-3.658,8.17-8.17V105.03l45.617-16.041v138.239l-45.617,16.041v-39.012
+                    c0-4.512-3.658-8.17-8.17-8.17s-8.17,3.658-8.17,8.17v44.759l-45.617,16.041V126.817z M371.745,454.468L264.17,492.296v-51.964
+                    l107.574-37.828V454.468z M379.915,320.163c-4.512,0-8.17,3.658-8.17,8.17v56.851L264.17,423.011V282.378l107.574-37.828v51.103
+                    c0,4.512,3.658,8.17,8.17,8.17c4.512,0,8.17-3.658,8.17-8.17v-51.104l42.213,14.845v140.633l-42.213-14.844v-56.849
+                    C388.085,323.821,384.427,320.163,379.915,320.163z M495.66,492.297l-107.574-37.828v-51.965l47.674,16.764
+                    c2.499,0.88,5.27,0.491,7.433-1.04c2.162-1.532,3.448-4.018,3.448-6.667V98.046c0-3.467-2.189-6.558-5.46-7.707l-53.094-18.671
+                    V19.705L495.66,57.533V492.297z" />
+              </g>
+            </g>
+          </svg> -->
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 93.25">
+            <title>architectural</title>
+            <path
+              d="M79.72,77.34a2.13,2.13,0,1,1,0-4.26h4V57.29H79.84a2.14,2.14,0,0,1,0-4.27h3.87V30.77H67.28V53h3.87a2.14,2.14,0,0,1,0,4.27H67.28v4.32a2.14,2.14,0,0,1-4.27,0V30.77H34.87V45.7H48.65a2.13,2.13,0,0,1,2.13,2.13V73.08H62.94V69.21a2.14,2.14,0,1,1,4.27,0v3.87h4.91a2.13,2.13,0,1,1,0,4.26H32.74a2.13,2.13,0,0,1-2.13-2.13V28.64a2.13,2.13,0,0,1,2.13-2.13H85.85A2.13,2.13,0,0,1,88,28.64V75.21a2.13,2.13,0,0,1-2.13,2.13ZM122.79,28V91.75H105.54V28h-.07l.59-1.19,7.12-14.63.72-1.5.76,1.47,7.58,14.64.64,1.21Zm-14.65-1.67h12l-4.78-9.2h-2.76l-4.48,9.2Zm-7.93,64V92h0a5,5,0,0,0,.21,1.24H14a13.34,13.34,0,0,1-6-1.78,14.9,14.9,0,0,1-5-4.19A14,14,0,0,1,.82,82.2a22.75,22.75,0,0,1-.44-6.06c0-17.92-.86-37.91,0-55.57C.35,15.77.32,10.78,2,6.9S7.16.13,14.06,0h.21a2.11,2.11,0,0,1,1.47.6,2.11,2.11,0,0,1,.6,1.47v9.81h91.07l-.61,1.24v0l-.12.25-.13.25-.12.25-.12.25-.12.26-.13.25,0,.11L105.39,16h-89V67.44a2.13,2.13,0,0,1-.49,1.22,2,2,0,0,1-1.26.69h-.05a25,25,0,0,0-3.36.73A10.62,10.62,0,0,0,8.4,71.35,8.64,8.64,0,0,0,6.25,73.4a14.1,14.1,0,0,0-1.77,3.21,18.83,18.83,0,0,0,.35,4.62,10.14,10.14,0,0,0,1.54,3.66l0,0a8.82,8.82,0,0,0,3,2.61l0,0a15,15,0,0,0,4.73,1.54h86.08v1.24ZM4.52,69.17l.23-.2a13.14,13.14,0,0,1,1.37-1,14.11,14.11,0,0,1,3.12-1.53,21.7,21.7,0,0,1,3-.8V4.29c-7.79,1.2-7.74,9-7.7,16.31a16.3,16.3,0,0,1,0,1.86V69.17ZM34.87,50V73.08H46.52V50Z" />
+          </svg>
+          <br />
+          <div class="icon-text-box-title">
+            <p>
+              DESIGN A HOUSE PLAN
+            </p>
+          </div>
+          <div class="icon-text-box-text">
+            <p>
+              Sing up for free, upload your design
+            </p>
+            <p>
+              and sell it to audiences worldwide
+            </p>
+          </div>
+        </div>
+
+        <div class="icon-text-box">
+          <!-- <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M213.931,239.454c-1.954-3.362-4.471-6.374-7.552-9.003c-2.876-2.423-5.999-4.514-9.327-6.221l-8.465-4.284
+          c-2.526-1.263-4.676-2.398-6.451-3.388c-1.297-0.725-2.321-1.451-3.021-2.133c-0.478-0.461-0.802-0.939-0.922-1.271
+          c-0.154-0.384-0.324-1.101-0.324-2.261c0-2.313,0-5.188,8.499-5.188c2.927,0,5.726,0.375,8.576,1.152
+          c2.901,0.759,5.453,1.749,7.646,2.91l7.347,3.908l5.103-21.922l-4.378-2.304c-3.226-1.698-6.997-3.089-11.273-4.139
+          c-8.448-2.022-17.826-2.048-25.378,0.077c-4.002,1.135-7.501,2.876-10.453,5.188c-3.072,2.415-5.504,5.478-7.177,9.071
+          c-1.698,3.576-2.551,7.637-2.551,12.1c0,4.139,0.853,7.876,2.475,11.051c1.476,2.953,3.499,5.666,6.076,8.098
+          c2.347,2.202,5.077,4.173,8.098,5.837c2.697,1.51,5.547,2.953,8.951,4.565l6.4,3.063c1.724,0.853,3.226,1.783,4.446,2.816
+          c1.024,0.853,1.852,1.783,2.372,2.697c0.401,0.734,0.597,1.766,0.597,3.021c0,2.534-0.853,3.635-2.176,4.54
+          c-3.84,2.662-11.716,2.833-18.765,1.075c-3.251-0.802-6.221-1.809-8.875-3.046l-7.049-3.251l-5.35,21.589l4.727,2.253
+          c3.874,1.86,8.226,3.277,12.928,4.198c4.548,0.896,9.045,1.348,13.372,1.348c4.625,0,9.028-0.623,13.15-1.877
+          c4.198-1.289,7.953-3.174,11.076-5.572c3.302-2.492,5.973-5.572,7.979-9.224c1.997-3.763,3.021-7.962,3.021-12.51
+          C217.284,247.569,216.158,243.191,213.931,239.454z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M309.632,214.383c-2.022-5.922-5.026-11.213-8.951-15.684c-3.9-4.523-8.849-8.175-14.703-10.871
+          c-11.725-5.35-27.972-5.299-39.603,0c-5.854,2.688-10.803,6.34-14.729,10.846c-3.925,4.497-6.929,9.788-8.926,15.684
+          c-1.997,5.803-3.004,11.964-3.004,18.338s0.998,12.553,2.978,18.321c2.039,5.922,5.035,11.204,8.96,15.684
+          c3.925,4.54,8.875,8.183,14.729,10.863c5.828,2.671,12.476,4.036,19.797,4.036c7.279,0,13.952-1.348,19.797-4.036
+          s10.803-6.34,14.703-10.837c3.925-4.497,6.929-9.788,8.926-15.684c1.997-5.803,3.004-11.972,3.004-18.347
+          S311.612,220.16,309.632,214.383z M286.916,243.84c-0.973,3.251-2.449,6.127-4.352,8.559c-1.775,2.261-3.977,4.002-6.724,5.316
+          c-5.427,2.611-13.901,2.603-19.354,0c-2.722-1.314-4.924-3.046-6.699-5.316c-1.903-2.44-3.379-5.316-4.352-8.576
+          c-1.05-3.473-1.579-7.228-1.579-11.153c0-3.925,0.529-7.654,1.579-11.136c0.973-3.226,2.423-6.076,4.326-8.465
+          c1.775-2.261,4.002-4.028,6.801-5.376c2.697-1.323,5.948-1.997,9.626-1.997c3.678,0,6.903,0.674,9.626,1.997
+          c2.773,1.348,5.001,3.115,6.775,5.376c1.903,2.389,3.354,5.24,4.326,8.474c1.05,3.465,1.579,7.211,1.579,11.136
+          S287.966,240.35,286.916,243.84z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <polygon
+                  points="342.409,258.091 342.409,185.259 318.259,185.259 318.259,280.124 376.661,280.124 376.661,258.091 		" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M460.664,213.7c-2.603-5.854-6.349-10.965-11.102-15.172c-4.676-4.173-10.351-7.475-16.879-9.813
+          c-6.426-2.287-13.602-3.447-21.376-3.447h-29.201v94.865h29.201c7.774-0.009,14.95-1.169,21.376-3.456
+          c6.528-2.338,12.203-5.649,16.879-9.813c4.753-4.216,8.499-9.31,11.102-15.172c2.577-5.803,3.874-12.186,3.874-19.004
+          C464.538,225.886,463.241,219.503,460.664,213.7z M438.229,243.516c-1.451,3.123-3.396,5.692-5.897,7.799
+          c-2.628,2.21-5.623,3.874-9.173,5.052c-3.652,1.229-7.646,1.835-11.853,1.835h-5.052v-51.029h5.052
+          c4.198,0,8.201,0.614,11.853,1.835c3.55,1.178,6.554,2.842,9.148,5.035c2.526,2.125,4.446,4.685,5.922,7.834
+          c1.451,3.123,2.176,6.75,2.176,10.803C440.405,236.8,439.68,240.452,438.229,243.516z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M512,64V38.4H64V0H38.4v38.4H0V64h38.4v422.4H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h76.8
+          c7.074,0,12.8-5.726,12.8-12.8c0-7.074-5.726-12.8-12.8-12.8H64V64h89.591v38.4H128c-14.14,0-25.6,11.46-25.6,25.6v204.8
+          c0,14.14,11.46,25.6,25.6,25.6h358.4c14.14,0,25.6-11.46,25.6-25.6V128c0-14.14-11.46-25.6-25.6-25.6h-25.6V64H512z M179.191,64
+          H435.2v38.4H179.191V64z M486.4,128v204.8H128V128H486.4z" />
+              </g>
+            </g>
+          </svg> -->
+
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="4600.000000pt" height="4600.000000pt"
+            viewBox="300 300 4600.000000 4600.000000" preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,5120.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+              <path d="M25215 44124 c-820 -88 -1570 -441 -2159 -1014 -620 -603 -981 -1331
+-1093 -2205 -27 -214 -25 -654 5 -875 83 -615 294 -1163 633 -1643 38 -54 69
+-101 69 -105 0 -4 -2325 -2332 -5167 -5174 l-5168 -5168 -1995 -3 c-2172 -3
+-2044 0 -2293 -58 -617 -144 -1147 -569 -1427 -1144 -80 -163 -120 -273 -160
+-439 -66 -265 -61 467 -57 -8866 l3 -8475 22 -115 c75 -387 221 -708 449 -990
+81 -100 268 -281 371 -359 293 -221 649 -368 1007 -415 108 -14 1791 -16
+17345 -16 15554 0 17237 2 17345 16 358 47 714 194 1007 415 103 78 290 259
+371 359 228 282 374 603 449 990 l22 115 4 8455 c2 6214 0 8488 -8 8580 -82
+912 -748 1681 -1637 1889 -249 58 -121 55 -2293 58 l-1995 3 -5167 5168
+c-2843 2842 -5168 5170 -5168 5174 0 4 31 51 69 105 340 482 549 1027 633
+1648 30 215 32 657 4 870 -111 872 -472 1602 -1092 2205 -595 579 -1345 929
+-2176 1015 -183 19 -573 18 -753 -1z m760 -1208 c349 -56 695 -190 978 -379
+163 -109 258 -187 392 -322 586 -590 831 -1422 660 -2248 -110 -534 -421
+-1039 -863 -1400 -267 -218 -655 -406 -994 -481 -363 -81 -733 -81 -1096 0
+-341 76 -722 261 -999 485 -104 84 -295 275 -373 374 -536 677 -683 1567 -393
+2375 311 865 1081 1481 2006 1605 138 19 545 13 682 -9z m-2332 -5525 c476
+-302 1034 -493 1612 -552 176 -17 550 -15 730 5 572 65 1103 249 1574 549 l94
+59 4756 -4756 4756 -4756 -11565 0 -11565 0 4755 4755 c2615 2615 4756 4755
+4758 4755 1 0 44 -26 95 -59z m19237 -10679 c364 -98 627 -373 700 -732 20
+-98 20 -133 18 -8517 l-3 -8418 -22 -76 c-52 -182 -129 -316 -254 -440 -127
+-127 -296 -217 -471 -253 -70 -15 -1600 -16 -17248 -16 -15648 0 -17178 1
+-17248 16 -175 36 -344 126 -471 253 -125 124 -202 258 -254 440 l-22 76 -3
+8418 c-2 8384 -2 8419 18 8517 61 297 247 535 521 664 102 48 188 74 289 86
+36 4 7783 7 17215 6 l17150 -1 85 -23z" />
+              <path d="M14675 21249 c-1084 -89 -1795 -517 -2122 -1277 -100 -232 -142 -422
+-150 -682 -13 -421 86 -783 304 -1115 208 -315 483 -551 858 -735 340 -167
+700 -286 1395 -460 371 -93 708 -186 871 -240 402 -134 599 -287 687 -532 21
+-61 26 -95 30 -209 5 -158 -13 -251 -73 -378 -90 -188 -276 -375 -476 -476
+-146 -74 -355 -131 -569 -155 -126 -15 -453 -15 -565 0 -185 23 -358 70 -502
+136 -179 81 -373 243 -493 412 -78 110 -177 313 -225 461 -38 121 -85 307 -85
+341 0 14 -7 20 -22 20 -27 0 -1339 -128 -1384 -135 l-31 -5 9 -63 c139 -1047
+633 -1781 1438 -2138 291 -129 600 -206 1015 -256 189 -22 846 -25 1050 -5
+681 68 1177 237 1566 533 470 358 784 954 818 1554 19 348 -32 721 -134 985
+-183 474 -530 840 -1030 1085 -346 169 -736 295 -1500 485 -1030 256 -1369
+413 -1504 695 -42 87 -55 157 -49 272 11 209 113 357 334 483 226 129 509 190
+884 190 628 0 973 -167 1175 -570 46 -92 107 -276 130 -392 10 -49 23 -88 29
+-88 6 0 326 11 711 25 385 14 711 25 724 25 l24 0 -7 103 c-37 570 -248 1052
+-623 1424 -376 372 -868 580 -1568 663 -205 25 -745 36 -940 19z" />
+              <path d="M22185 21253 c-665 -41 -1254 -217 -1690 -505 -472 -311 -883 -785
+-1139 -1312 -275 -566 -399 -1244 -383 -2091 8 -390 35 -644 102 -965 117
+-551 350 -1052 678 -1460 87 -107 355 -373 467 -462 485 -385 1052 -608 1765
+-694 214 -26 805 -26 1020 -1 856 102 1508 409 2042 960 567 586 876 1343 954
+2337 14 186 14 673 0 860 -44 552 -154 1017 -340 1435 -334 747 -929 1327
+-1679 1634 -350 143 -735 230 -1167 261 -127 9 -504 11 -630 3z m583 -1264
+c462 -51 828 -228 1138 -551 310 -323 483 -731 565 -1329 26 -195 38 -748 20
+-964 -36 -433 -124 -791 -267 -1085 -111 -228 -214 -370 -395 -545 -293 -283
+-623 -443 -1028 -499 -148 -21 -454 -21 -602 0 -419 58 -770 233 -1069 534
+-290 291 -477 663 -574 1140 -48 239 -66 411 -73 705 -22 934 184 1618 619
+2056 302 305 681 488 1118 538 110 12 436 13 548 0z" />
+              <path d="M33350 17500 l0 -3631 1603 4 c1631 4 1667 4 1947 43 352 49 656 141
+959 293 305 153 516 317 731 567 380 442 656 1062 764 1717 126 759 87 1739
+-94 2422 -230 865 -749 1560 -1421 1903 -372 190 -742 272 -1374 302 -120 6
+-831 10 -1662 10 l-1453 0 0 -3630z m2775 2390 c465 -23 675 -65 920 -186 481
+-237 757 -736 840 -1519 52 -490 37 -1211 -35 -1653 -54 -329 -170 -665 -303
+-870 -165 -255 -460 -439 -822 -511 -204 -40 -285 -44 -1107 -48 l-798 -4 0
+2400 0 2401 548 0 c301 0 642 -5 757 -10z" />
+              <path d="M27200 17470 l0 -3600 2555 0 2555 0 0 615 0 615 -1820 0 -1820 0 0
+2985 0 2985 -735 0 -735 0 0 -3600z" />
+            </g>
+          </svg>
+
+
+          <br />
+          <div class="icon-text-box-title">
+            <p>
+              SELL YOUR HOME DESIGN TO WORLD AUDIENCES
+            </p>
+          </div>
+          <div class="icon-text-box-text">
+            <p>
+              Get notified when you receive an order
+            </p>
+            <p>
+              and utilize our portal for seamless
+            </p>
+            <p>
+              communication with your customers
+            </p>
+          </div>
+        </div>
+        <div class="icon-text-box">
+          <!-- <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px" viewBox="0 0 209 256"
+            enable-background="new 0 0 209 256" xml:space="preserve">
+            <path d="M120.523,2l-1.877,23.625H96.625v78.681h-2.458c-14.746,0-28.129,8.628-34.214,22.06L2.125,254h78.75l5.07-16.892
+                C122.588,225.945,132.216,191,132.216,191h51.034v-18.12l10.529,0.837L206.875,8.861L120.523,2z M175.375,166.606
+                c-7.757,2.097-13.697,8.53-15.077,16.519h-44.767c-2.957,15.124-14.146,28.884-29.224,35.043c-0.487,0.199-0.992,0.293-1.488,0.293
+                c-1.552,0-3.023-0.924-3.647-2.449c-0.822-2.013,0.143-4.311,2.156-5.134c14.782-6.038,25.106-20.689,25.106-35.628
+                c0-0.007,0.002-3.938,0.002-3.938h40.032c5.948,0,11.048-4.654,11.154-10.601c0.108-6.056-4.765-10.996-10.797-11.006l-70.906-0.049
+                c-2.174,0-3.938-1.763-3.938-3.938s1.763-3.938,3.938-3.938h26.58V49.236c7.999-1.632,14.288-7.837,16.1-15.736h38.987
+                c1.791,7.83,7.972,13.941,15.789,15.668V166.606z M187.86,148.775c-1.608,0.301-3.149,0.796-4.61,1.446V25.625h-53.998
+                c6.856-1.808,12.395-7.039,14.546-13.876l38.864,3.088c1.166,7.947,6.842,14.528,14.498,16.868L187.86,148.775z M167.696,107.404
+                c0.028-15.077-12.011-27.764-27.692-27.793c-15.077-0.028-27.766,12.614-27.793,27.692c-0.028,15.077,12.011,27.764,27.692,27.793
+                C154.98,135.124,167.668,122.482,167.696,107.404z M123.666,109.737l-4.825-0.009l0.01-5.428l4.222,0.008
+                c0.004-2.413,1.216-5.426,1.823-7.837l6.028,1.821c-0.605,1.205-1.213,3.616-1.22,7.235c-0.005,3.015,1.197,4.827,3.007,4.831
+                s3.019-1.804,4.836-6.022c2.423-6.027,4.841-9.038,9.666-9.028c4.221,0.611,7.832,4.236,9.031,9.063l4.825,0.009l-0.01,5.428
+                l-4.222-0.008c-0.005,2.413-1.22,7.235-1.826,9.043l-6.028-1.821c1.21-1.807,2.422-5.423,2.428-8.439
+                c0.006-3.619-1.196-5.43-3.609-5.434c-1.809-0.004-3.018,1.201-4.835,5.419c-1.819,5.424-4.842,9.641-9.667,9.632
+                C128.475,118.189,124.861,115.166,123.666,109.737z" />
+          </svg> -->
+
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="900.000000pt" height="900.000000pt"
+            viewBox="0 0 900.000000 900.000000" preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,900.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+              <path d="M5688 8257 c-30 -34 -226 -267 -435 -517 -511 -611 -770 -919 -1412
+         -1683 -152 -181 -284 -339 -293 -351 l-17 -23 392 -219 c369 -206 396 -223
+         468 -294 62 -63 81 -89 109 -155 29 -69 34 -94 38 -181 3 -76 0 -116 -13 -160
+         -56 -196 -206 -338 -400 -379 -88 -18 -134 -19 -212 0 -46 11 -737 228 -863
+         271 -13 5 -13 3 0 -10 8 -8 105 -90 216 -183 458 -384 805 -675 1075 -901
+         l287 -241 68 82 c38 45 161 192 274 327 336 401 674 803 835 995 359 428 830
+         990 1224 1460 120 143 295 352 390 464 94 113 171 207 170 210 0 3 -111 98
+         -246 211 -136 113 -319 266 -407 340 -594 500 -1163 977 -1177 987 -15 11 -24
+         4 -71 -50z m-370 -1727 c363 -87 628 -400 649 -766 6 -107 -9 -205 -49 -311
+         -30 -80 -107 -192 -180 -258 -232 -213 -566 -254 -863 -106 -212 105 -354 267
+         -434 494 -34 97 -35 108 -36 237 0 153 17 228 83 355 55 107 191 240 302 294
+         47 22 119 50 160 61 103 26 258 26 368 0z" />
+              <path d="M4984 6239 c-27 -17 -63 -44 -79 -60 l-30 -28 -49 41 -48 42 -37 -45
+         c-20 -24 -48 -57 -63 -74 l-26 -30 51 -46 51 -45 -17 -60 c-32 -113 -14 -202
+         54 -273 105 -109 230 -109 419 1 109 62 170 62 170 -2 0 -57 -85 -143 -197
+         -198 -29 -14 -53 -29 -53 -33 0 -6 103 -154 120 -172 12 -13 112 40 167 88
+         l50 44 48 -40 c26 -21 51 -39 55 -39 8 0 99 103 115 129 6 10 -7 28 -45 61
+         l-53 47 16 48 c23 66 22 178 -2 231 -23 51 -78 107 -134 136 -32 17 -59 22
+         -114 22 -70 0 -78 -3 -205 -67 -73 -37 -140 -67 -148 -67 -23 0 -40 21 -40 48
+         0 32 96 132 163 167 28 15 53 29 55 30 7 5 -123 175 -133 175 -6 0 -33 -14
+         -61 -31z" />
+              <path d="M2930 7039 c-80 -17 -762 -208 -1102 -309 -77 -23 -120 -30 -184 -30
+         l-84 0 0 -774 0 -775 68 19 c37 10 130 35 207 55 77 20 171 45 210 56 91 25
+         165 25 216 -1 22 -12 90 -73 152 -136 115 -119 195 -183 282 -226 55 -28 315
+         -115 887 -298 408 -130 445 -137 542 -104 64 22 147 100 177 166 34 78 32 186
+         -5 261 -14 30 -43 70 -64 89 -20 18 -277 168 -570 332 -416 233 -539 306 -560
+         334 -24 31 -27 45 -27 107 0 63 3 76 29 109 48 64 89 76 257 76 l145 0 245
+         292 c134 160 301 359 371 442 70 83 128 153 128 156 0 3 -73 18 -163 34 -89
+         15 -247 44 -352 63 -473 86 -632 98 -805 62z" />
+              <path d="M850 6858 c0 -18 7 -91 14 -163 8 -71 24 -236 36 -365 11 -129 36
+         -399 55 -600 19 -201 44 -468 55 -595 11 -126 23 -247 26 -267 l6 -38 144 0
+         144 0 0 1030 0 1030 -240 0 -240 0 0 -32z" />
+              <path d="M3005 3201 c-90 -22 -172 -92 -214 -180 -22 -47 -26 -70 -26 -141 0
+         -126 27 -176 158 -288 237 -204 463 -405 616 -546 322 -297 498 -418 742 -511
+         182 -70 150 -68 1039 -75 887 -7 850 -4 983 -72 58 -29 163 -124 218 -195 l24
+         -32 300 29 c165 16 356 34 425 40 69 6 285 26 480 45 195 19 395 37 443 41 75
+         6 88 9 84 23 -8 26 -243 629 -285 731 -213 512 -403 788 -643 935 -87 54 -228
+         103 -362 128 -120 22 -136 22 -1007 22 l-885 0 -51 -27 c-110 -58 -164 -145
+         -164 -264 0 -101 22 -158 89 -225 90 -90 85 -89 563 -89 438 0 457 -2 492 -51
+         26 -38 20 -77 -18 -115 l-34 -34 -639 0 c-692 0 -749 4 -908 55 -112 37 -178
+         75 -419 244 -508 355 -781 535 -831 548 -53 14 -122 15 -170 4z" />
+              <path d="M8410 1109 c-70 -8 -229 -23 -1370 -129 -239 -22 -462 -42 -495 -45
+         -33 -3 -75 -8 -92 -11 l-33 -5 0 -139 0 -140 1035 0 1035 0 0 240 c0 132 -1
+         239 -2 239 -2 -1 -37 -6 -78 -10z" />
+            </g>
+          </svg>
+
+          <br />
+          <div class="icon-text-box-title">
+            <p>
+              GET PAID & REVIEWS
+            </p>
+          </div>
+          <div class="icon-text-box-text">
+            <p>
+              Get securely paid. Receive reviews and
+            </p>
+            <p>
+              raitings from customers on your MyHomboo
+            </p>
+            <p>
+              profile to gain the trust of future customers.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-separation-sections">
+        <button class="btn btn-homboo">Become a Homboo Architect</button>
+      </div>
+    </div>
+
+    <div class="col-md-12" style="margin-bottom:30px;padding:0px;">
+
+
+      <div class="panel-second-section">
+        <div class="img-section">
+          <h1>
+            <p class="text-inline-responsive">
+              Number of Houses
+            </p>
+            <p class="text-inline-responsive">
+              Built in 2023
+            </p>
+            <p>
+              950 k
+            </p>
+          </h1>
+          <div>
+            <img src="./images/Are-You-Architect/carousel-1-plus.webp" />
+          </div>
+        </div>
+        <div class="img-section">
+          <h1>
+            <p class="text-inline-responsive">
+              Built by Professional
+            </p>
+            <p class="text-inline-responsive">
+              Home Builders
+            </p>
+            <p>
+              720 k
+            </p>
+          </h1>
+          <div>
+            <img src="./images/Are-You-Architect/carousel-2-plus.webp" />
+          </div>
+        </div>
+        <div class="img-section">
+          <h1>
+            <p class="text-inline-responsive">
+              Built by non
+            </p>
+            <p class="text-inline-responsive">
+              Professional Builders
+            </p>
+            <p>
+              230 k
+            </p>
+          </h1>
+          <div>
+            <img src="./images/Are-You-Architect/carousel-3-plus.webp" />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="panel panel-information center panel-img-container"
+        style="display: flex; align-items: center; justify-content: center;">
+        <img class="img-container" src="./images/Are-You-Architect/sectiontwo.jpg" />
+        <div class="panel-img-three-titles">
+          <h1 class="">
+            US Single Family Market Size 950 K Unt.
+          </h1>
+          <h1 class="">
+            Build by Home Builders for Sale 720 K Unt.
+          </h1>
+          <h1 class="panel-img-three-titles-lastchild">
+            Built by Semi-custom home Clients 230 k Unt.
+          </h1>
+          <button class="btn btn-homboo" onclick="">Start selling</button>
+        </div>
+      </div> -->
+
+      <div class="encabezado-section">
+        <h1>MEET SOME OF THE ARCHITECTS</h1>
+      </div>
+      <!-- <div style="position: absolute; height: 355px; width: 100%; display: flex; justify-content: center; align-items: center;">
+        <h1 style="position: absolute; color: white; z-index: 1; margin: 0px; padding: 0px; font-family: Lato-Bold; text-shadow: 6px black;">COMING SOON</h1>
+        <div style="position: absolute; box-shadow: 1px black; background-color: rgba(0,0,0,0.25); height: 355px; width: 100%;">
+          <p></p>
+        </div>
+      </div> -->
+      <div class="coming-soon">
+        <h1>COMING SOON</h1>
+        <div class="card-architect-section">
+          <div class="card-architect">
+            <div class="card-architect-img">
+              <img src="./images/customize/service_customize.jpeg" />
+            </div>
+            <div class="card-architect-text">
+              <p class="green-bold-text">Name</p>
+              <p class="green-bold-text">
+                <svg width="12px" height="12px" viewBox="0 0 24 24" id="meteor-icon-kit__solid-check-circle" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM7.56066 10.9393L10.5 13.8787L16.4393 7.93934C17.0251 7.35355 17.9749 7.35355 18.5607 7.93934C19.1464 8.52513 19.1464 9.47487 18.5607 10.0607L11.5607 17.0607C10.9749 17.6464 10.0251 17.6464 9.43934 17.0607L5.43934 13.0607C4.85355 12.4749 4.85355 11.5251 5.43934 10.9393C6.02513 10.3536 6.97487 10.3536 7.56066 10.9393Z"
+                      fill="#25bc69" />
+
+                  </g>
+
+                </svg> Verified Architect
+              </p>
+              <p>800 Home Plans Sold</p>
+              <p>RAITING</p>
+              <div>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-architect">
+            <div class="card-architect-img">
+              <img src="./images/customize/service_customize.jpeg" />
+            </div>
+            <div class="card-architect-text">
+              <p class="green-bold-text">Name</p>
+              <p class="green-bold-text">
+                <svg width="12px" height="12px" viewBox="0 0 24 24" id="meteor-icon-kit__solid-check-circle" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM7.56066 10.9393L10.5 13.8787L16.4393 7.93934C17.0251 7.35355 17.9749 7.35355 18.5607 7.93934C19.1464 8.52513 19.1464 9.47487 18.5607 10.0607L11.5607 17.0607C10.9749 17.6464 10.0251 17.6464 9.43934 17.0607L5.43934 13.0607C4.85355 12.4749 4.85355 11.5251 5.43934 10.9393C6.02513 10.3536 6.97487 10.3536 7.56066 10.9393Z"
+                      fill="#25bc69" />
+
+                  </g>
+
+                </svg> Verified Architect
+              </p>
+              <p>800 Home Plans Sold</p>
+              <p>RAITING</p>
+              <div>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-architect">
+            <div class="card-architect-img">
+              <img src="./images/customize/service_customize.jpeg" />
+            </div>
+            <div class="card-architect-text">
+              <p class="green-bold-text">Name</p>
+              <p class="green-bold-text">
+                <svg width="12px" height="12px" viewBox="0 0 24 24" id="meteor-icon-kit__solid-check-circle" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM7.56066 10.9393L10.5 13.8787L16.4393 7.93934C17.0251 7.35355 17.9749 7.35355 18.5607 7.93934C19.1464 8.52513 19.1464 9.47487 18.5607 10.0607L11.5607 17.0607C10.9749 17.6464 10.0251 17.6464 9.43934 17.0607L5.43934 13.0607C4.85355 12.4749 4.85355 11.5251 5.43934 10.9393C6.02513 10.3536 6.97487 10.3536 7.56066 10.9393Z"
+                      fill="#25bc69" />
+
+                  </g>
+
+                </svg> Verified Architect
+              </p>
+              <p>800 Home Plans Sold</p>
+              <p>RAITING</p>
+              <div>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-architect invisible-530-to-710">
+            <div class="card-architect-img">
+              <img src="./images/customize/service_customize.jpeg" />
+            </div>
+            <div class="card-architect-text">
+              <p class="green-bold-text">Name</p>
+              <p class="green-bold-text">
+                <svg width="12px" height="12px" viewBox="0 0 24 24" id="meteor-icon-kit__solid-check-circle" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM7.56066 10.9393L10.5 13.8787L16.4393 7.93934C17.0251 7.35355 17.9749 7.35355 18.5607 7.93934C19.1464 8.52513 19.1464 9.47487 18.5607 10.0607L11.5607 17.0607C10.9749 17.6464 10.0251 17.6464 9.43934 17.0607L5.43934 13.0607C4.85355 12.4749 4.85355 11.5251 5.43934 10.9393C6.02513 10.3536 6.97487 10.3536 7.56066 10.9393Z"
+                      fill="#25bc69" />
+
+                  </g>
+
+                </svg> Verified Architect
+              </p>
+              <p>800 Home Plans Sold</p>
+
+              <p>RAITING</p>
+              <div>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-architect invisible-max-860">
+            <div class="card-architect-img">
+              <img src="./images/customize/service_customize.jpeg" />
+            </div>
+            <div class="card-architect-text">
+              <p class="green-bold-text">Name</p>
+              <p class="green-bold-text">
+                <svg width="12px" height="12px" viewBox="0 0 24 24" id="meteor-icon-kit__solid-check-circle" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM7.56066 10.9393L10.5 13.8787L16.4393 7.93934C17.0251 7.35355 17.9749 7.35355 18.5607 7.93934C19.1464 8.52513 19.1464 9.47487 18.5607 10.0607L11.5607 17.0607C10.9749 17.6464 10.0251 17.6464 9.43934 17.0607L5.43934 13.0607C4.85355 12.4749 4.85355 11.5251 5.43934 10.9393C6.02513 10.3536 6.97487 10.3536 7.56066 10.9393Z"
+                      fill="#25bc69" />
+
+                  </g>
+
+                </svg> Verified Architect
+              </p>
+              <p>800 Home Plans Sold</p>
+              <p>RAITING</p>
+              <div>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+                <svg fill="#f4d109" width="18px" height="18px" viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#f4d109">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1915.918 737.475c-10.955-33.543-42.014-56.131-77.364-56.131h-612.029l-189.063-582.1v-.112C1026.394 65.588 995.335 43 959.984 43c-35.237 0-66.41 22.588-77.365 56.245L693.443 681.344H81.415c-35.35 0-66.41 22.588-77.365 56.131-10.955 33.544.79 70.137 29.478 91.03l495.247 359.831-189.177 582.212c-10.955 33.657 1.13 70.25 29.817 90.918 14.23 10.278 30.946 15.487 47.66 15.487 16.716 0 33.432-5.21 47.775-15.6l495.134-359.718 495.021 359.718c28.574 20.781 67.087 20.781 95.662.113 28.687-20.668 40.658-57.261 29.703-91.03l-189.176-582.1 495.36-359.83c28.574-20.894 40.433-57.487 29.364-91.03"
+                      fill-rule="evenodd" />
+                  </g>
+
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-separation-sections">
+        <button class="btn btn-homboo margin-desktop-top-30" onclick="">Start the journey today</button>
+      </div>
+    </div>
+
+    <!-- <div class="panel-fullwidth-background-gray"> -->
+
+    <div id="faqs" class="col-md-12 panel-fullwidth-background-gray">
+      <div class="encabezado-section faq-div">
+        <h1>
+          FAQ
+        </h1>
+      </div>
+      <div class="faq-section">
+
+        <div class="faq-option" id="internAccordionOne" style="margin-left: 10px;">
+          <!-- PRIMER ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionOne" href="#internCollapseOne">
+                <!--                   <a class="accordion-toggle-close">
+                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                      style="position: relative; top: 2px; padding-left: 5px; padding-top: 5px">
+                      <path
+                        d="m 1 5 c 0 -0.265625 0.105469 -0.519531 0.292969 -0.707031 c 0.390625 -0.390625 1.023437 -0.390625 1.414062 0 l 5.292969 5.292969 l 5.292969 -5.292969 c 0.390625 -0.390625 1.023437 -0.390625 1.414062 0 c 0.1875 0.1875 0.292969 0.441406 0.292969 0.707031 s -0.105469 0.519531 -0.292969 0.707031 l -6 6 c -0.390625 0.390625 -1.023437 0.390625 -1.414062 0 l -6 -6 c -0.1875 -0.1875 -0.292969 -0.441406 -0.292969 -0.707031 z m 0 0"
+                        fill="#2e3436" />
+                    </svg>
+                  </a>
+                  <a class="accordion-toggle-open">
+                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      style="position: relative; top: 4px">
+                      <path d="M9 6L15 12L9 18" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a> -->
+                <a class="accordion-toggle-close">Joining Requirements</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+
+                <a class="accordion-toggle-open">Joining Requirements</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseOne" class="panel-collapse collapse" style="height: auto !important;">
+            <p>Homboo is a platform that warmly welcomes all architects, valuing their unique contributions. We do have
+              certain standards in place to ensure the quality of our community, but rest assured, all applications are
+              carefully reviewed.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionTwo" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseTwo">
+                <a class="accordion-toggle-close">Individual vs. Office Registration</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Individual vs. Office Registration</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseTwo" class="panel-collapse collapse">
+            <p>At Homboo, we believe in allowing architects to choose how they want to participate in our platform. You
+              can join as an individual or as part of an architecture firm/organization.</p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionThree" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseThree">
+                <a class="accordion-toggle-close">Publishing a Project</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Publishing a Project</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseThree" class="panel-collapse collapse">
+            <p>
+              Register, submit the required professional information, and then upload a project via the platform's
+              uploading service. Registration information and uploaded projects undergo team review before publication.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionFour" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseFour">
+                <a class="accordion-toggle-close">Design Styles</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Design Styles</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseFour" class="panel-collapse collapse">
+            <p>
+              At homboo, we strive to offer customers the next generation of home designs. We encourage architects to
+              upload modern and contemporary house designs. Please keep in mind homeowners' needs and requirements to
+              meet the demand.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionFive" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseFive">
+                <a class="accordion-toggle-close">Requirements for a house design Project</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Requirements for a house design Project</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseFive" class="panel-collapse collapse">
+            <p>
+              At Homboo, we urge architects to upload and sell projects designed in wood framing. All house designs must
+              include the information needed to build them correctly. It comprises the house's general foundation floor
+              plan, design type, scaled floor plans/elevations/sections, exterior and interior finish materials and
+              construction details, bathroom fixtures/furniture, closets, and other required detailing. Engineering
+              drawings are optional. Homboo disclaims legal responsibility in providing project design quality matters.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionSix" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseSix">
+                <a class="accordion-toggle-close">Copyright Ownership</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Copyright Ownership</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseSix" class="panel-collapse collapse">
+            <p>
+              Architects must own the copyright to uploaded projects. Homboo disclaims legal responsibility in copyright
+              matters. </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionSeven" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseSeven">
+                <a class="accordion-toggle-close">Earning Money</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Earning Money</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseSeven" class="panel-collapse collapse">
+            <p>
+              Architects earn their set-up sell price minus Homboo's sale fee commission.
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+        <div class="faq-option" id="internAccordionEight" style="margin-left: 10px;">
+          <!-- SEGUNDO ACORDEON INTERNO -->
+          <div>
+            <h4 class="panel-title" style="text-align: left;">
+              <p class="accordion-toggle accordion-intern collapsed accordion-group" data-toggle="collapse"
+                data-parent="#internAccordionTwo" href="#internCollapseEight">
+                <a class="accordion-toggle-close">Upload Charges</a>
+                <svg class="accordion-toggle-close" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+                <a class="accordion-toggle-open">Upload Charges</a>
+                <svg class="accordion-toggle-open" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                      fill="#000000" />
+                  </g>
+
+                </svg>
+              </p>
+            </h4>
+          </div>
+          <div id="internCollapseEight" class="panel-collapse collapse">
+            <p>
+              Homboo does not charge architects for project uploads or membership!
+            </p>
+            <p></p>
+          </div>
+          <!-- FIN PRIMER ACORDEON INTERNO -->
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-12" style="text-align: center;margin-top: 60px; font-size: 24px; color: #666666;">
+      <p style="padding: 0px; margin: 0px;">It's your time to shape society with your incredible designs!</p>
+      <p style="padding: 0px; margin: 0px;">Your creativity and innovation will inspire change and will transform
+        families and communities.</p>
+      <div style="text-align: center;">
+        <br />
+        <button class="btn btn-homboo" onclick="">Get Started</button>
+      </div>
+    </div>
+
+    <!-- </div> -->
+
+  </section>
+
+  <!-- COMIENZA FOOTER -->
+  <footer class="site-footer">
+    <div class="wrapper footer-menu">
+      <div class="option-left">
+        <div class="subscribe">
+          <div class="title">Subscribe</div>
+          <div class="description">Join our newsletter to Get Inspired!</div>
+          <div class="input" style="padding: 0px">
+            <input type="email" class="form-control" placeholder="Your E-mail">
+          </div>
+          <div><button class="btn btn-homboo-secondary">Sign Up</button></div>
+        </div>
+      </div>
+      <div class="option-right">
+        <div class="option">
+          <label>Corporate</label>
+          <ul class="footer-submenu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Term & Conditions</a></li>
+            <li><a href="#">Privacy Policies</a></li>
+            <li><a href="12_TermConditions.html#returnPolicies">Return Policies</a></li>
+          </ul>
+        </div>
+        <div class="option">
+          <label>Customer Service</label>
+          <ul class="footer-submenu">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">F.A.Q.s</a></li>
+          </ul>
+        </div>
+        <div class="option">
+          <label>My Homboo</label>
+          <ul class="footer-submenu">
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+        <div class="option">
+          <label>Are you an architect?</label>
+          <ul class="footer-submenu">
+            <li><a href="#">Register and publish your designs!</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper legacy">
+      <div class="legacy-social">
+        <div>
+          <img src="images/logo-blanco-blanco.png" alt="" height="20px">
+        </div>
+        <div>
+          <a href="https://www.youtube.com/channel/UC0hbQMi4mOE0i4QQ0hqkMwg" target="_blank">
+            <i class="fa fa-youtube-play"></i>
+          </a>
+          <a href="https://www.facebook.com/hombooweb" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="http://pinterest.com/hombooweb/" target="_blank">
+            <i class="fa fa-pinterest-p"></i>
+          </a>
+          <a href="https://twitter.com/hombooweb" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://www.flickr.com/photos/hombooweb/" target="_blank">
+            <i class="fa fa-flickr"></i>
+          </a>
+          <a href="http://www.instagram.com/hombooweb" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="legacy-right">
+        <span class="right">Homboo Digital Inc | C.I.F. B88051883 2018 - All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+  <!-- TERMINA FOOTER -->
+
+  <script>
+    window.onload = function () {
+
+      let hash = window.location.hash;
+      if (!hash) return
+      if (hash === "") return
+      let target = document.querySelector(hash);
+      let salto = 0;
+
+      if(document.documentElement.offsetWidth >= 0) salto = 2350;
+      if(document.documentElement.offsetWidth >= 360) salto = 2550;
+      if(document.documentElement.offsetWidth >= 370) salto = 2450;
+      if(document.documentElement.offsetWidth >= 475) salto = 2400;
+      if(document.documentElement.offsetWidth >= 530) salto = 2150;
+      if(document.documentElement.offsetWidth >= 550) salto = 2200;
+      if(document.documentElement.offsetWidth >= 900) salto = 1750;
+      if(document.documentElement.offsetWidth >= 1000) salto = 1830;
+
+      console.log(document.documentElement.offsetWidth, salto, target.offsetTop, Math.abs(target.offsetTop - salto))
+
+      if(Math.abs(target.offsetTop - salto) > 200) salto = target.offsetTop*0.92
+
+      window.scrollTo(0, salto);
+
+    }
+  </script>
+
+</body>
+
+</html>
